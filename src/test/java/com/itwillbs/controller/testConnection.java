@@ -14,6 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/root-context.xml"})
 public class testConnection {
 	
+	private final String NAMESPACE = "com.itwillbs.mapper.MemberMapper";
 	@Inject
 	private SqlSession sqlSession;
 	
@@ -22,5 +23,6 @@ public class testConnection {
 	@Test
 	public void 연결테스트() {
 		logger.debug("SqlSession : " + sqlSession);
+		logger.debug(sqlSession.selectOne(NAMESPACE + ".getTime"));
 	}
 }
