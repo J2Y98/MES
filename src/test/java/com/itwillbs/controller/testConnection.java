@@ -20,6 +20,7 @@ public class testConnection {
 	
 	private static final Logger logger = LoggerFactory.getLogger(testConnection.class);
 	
+	// 연결 테스트
 	@Test
 	public void 연결테스트() {
 		logger.debug("SqlSession : " + sqlSession);
